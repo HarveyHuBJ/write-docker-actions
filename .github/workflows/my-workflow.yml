@@ -22,3 +22,6 @@ jobs:
           firstGreeting: "Learning Lab User"
           thirdGreeting: "Birder"
 
+      - name: meow
+        uses: ./.github/actions/cat-facts    
+
