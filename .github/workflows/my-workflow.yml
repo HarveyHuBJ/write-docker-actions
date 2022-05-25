@@ -10,6 +10,6 @@ jobs:
       - name: Run a one-line script
         run: Echo hello, workflow
       - name: Run a multi-line script
-        run:
+        run: |
           echo add other actions to build,
           echo test, and deploy your project
