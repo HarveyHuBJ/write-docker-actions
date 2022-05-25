@@ -8,8 +8,10 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Run a one-line script
-        run: Echo hello, workflow
+        run: echo hello, workflow
       - name: Run a multi-line script
         run: |
           echo add other actions to build,
           echo test, and deploy your project
+      - name: hello-action
+        uses: ./.github/actions/hello-world    
