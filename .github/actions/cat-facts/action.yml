@@ -1,0 +1,10 @@
+name: "my cat fact action"
+description: "Get external data with github actions"
+
+outputs:
+  fact:
+    description: Resulting cat fact from the https://cat-fact.herokuapp.com
+
+runs:
+  using: "docker"
+  image: "Dockerfile"    
