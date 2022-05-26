@@ -1,6 +1,11 @@
 name: CI
 on: 
   workflow_dispatch:
+    inputs:
+      greeting_name:
+        description: "Person to greet"
+        default:  "Homee"
+        required: true
   pull_request:
     types:
       - "labeled"
