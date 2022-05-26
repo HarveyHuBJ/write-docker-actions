@@ -12,21 +12,21 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - name: Run a one-line script
-        run: echo hello, workflow
-      - name: Run a multi-line script
-        run: |
-          echo add other actions to build,
-          echo test, and deploy your project
-      - name: hello-action
-        uses: ./.github/actions/hello-world    
-        with:
-          firstGreeting: "Learning Lab User"
-          thirdGreeting: "Birder"
+      # - name: Run a one-line script
+      #   run: echo hello, workflow
+      # - name: Run a multi-line script
+      #   run: |
+      #     echo add other actions to build,
+      #     echo test, and deploy your project
+      # - name: hello-action
+      #   uses: ./.github/actions/hello-world    
+      #   with:
+      #     firstGreeting: "Learning Lab User"
+      #     thirdGreeting: "Birder"
 
-      - name: meow
-        uses: ./.github/actions/cat-facts  
-        id: cat
+      # - name: meow
+      #   uses: ./.github/actions/cat-facts  
+      #   id: cat
 
       - name: create-issue
         uses: ./.github/actions/issue-maker
