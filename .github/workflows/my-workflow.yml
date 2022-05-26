@@ -1,9 +1,9 @@
 name: CI
 on: 
+  workflow_dispatch:
   pull_request:
     types:
       - "labeled"
-  workflow_dispatch:
     
 
 jobs:
@@ -25,5 +25,13 @@ jobs:
           thirdGreeting: "Birder"
 
       - name: meow
-        uses: ./.github/actions/cat-facts    
+        uses: ./.github/actions/cat-facts  
+        id: cat
+
+      - name: create-issue
+        uses: ./.github/actions/issue-maker
+        with:
+          repoToken: ${{secrets.GITHUB_TOKEN}}
+          catFact: ${{setps.cat.outputs.fact}}
+          issueTitle: "a cat fact for you"    
 
